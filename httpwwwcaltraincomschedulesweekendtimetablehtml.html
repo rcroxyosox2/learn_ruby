@@ -1,0 +1,1830 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<script type="text/javascript">
+<!--
+var ipVirDir="/";
+var ipSysImageDir="/system/images";
+var ipSiteTemplateDir="/SharedSites/3/templates";
+var ipDynamicFQDN="http://www.caltrain.com";
+var ipCurrentPageClass="ContentPage";
+var ipCurrentPageDefID="3438";
+var ipCurrentTemplateID="4";
+//-->
+</script>
+<script src="/scripts/ip-utilities.js?ver=14.2.152.0" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+ipjPageSiteID=3;
+ipjPageSiteGroupID=0;
+//-->
+</script>
+<script src="/scripts/ip-ulaccordion.js?ver=14.2.152.0" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+//-->
+</script>
+<meta name="description" content=""/>
+<meta name="Generator" content="IronPoint v7"/>
+<meta name="UpdateDateTime" content="12/6/2017 8:58:32 AM"/>
+
+<title>Weekend Timetable</title>
+
+<meta name="viewport" content="width=device-width" />
+<meta name="google-translate-customization" content="adb8985a18eb576c-9c986eccd3d70d3b-ga4d12b30bf87ac84-10"></meta>
+<link href="/SharedSites/3/templates/css/Default.css" rel="stylesheet" type="text/css"/>
+<link href="/SharedSites/3/templates/css/PageTypes.css" rel="stylesheet" type="text/css"/>
+<link type="image/ico" rel="shortcut icon" href="/SharedSites/3/templates/images/favicon.ico"/>
+<link title="fontsizelarge" media="screen" href="/SharedSites/3/templates/css/fontsize-large.css" type="text/css" rel="alternate stylesheet"/>
+<link title="fontsizeextralarge" media="screen" href="/SharedSites/3/templates/css/fontsize-extralarge.css" type="text/css" rel="alternate stylesheet"/>
+<script type="text/javascript" src="/SharedSites/3/templates/js/textsizer.js"></script>
+<script type="text/javascript" src="/SharedSites/3/templates/js/skip.js"></script>
+<!--[if lt IE 7]>
+	<script defer type="text/javascript" src="/SharedSites/3/templates/js/pngfix.js"></script>
+<![endif]-->
+<style type="text/css">
+<!--
+#tblACMAdminToolbar { z-index:999; width:1954px;}
+-->
+</style>
+
+<script type="text/javascript">
+function myload()
+{
+//alert("Page is loaded");
+//tablecollapse();
+//tablecollapse_II();
+}
+
+function tablecollapse()
+{
+	/* Variables */
+	var collapseClass='footcollapse';
+	var collapsePic='\\SharedSites\\3\\templates\\images\\arrow_up.gif';
+	var expandPic='\\SharedSites\\3\\templates\\images\\arrow_down.gif';
+	var initialCollapse=true;
+
+	// loop through all tables
+	var t=document.getElementsByTagName('table');
+	var checktest= new RegExp("(^|\\s)" + collapseClass + "(\\s|$)");
+	for (var i=0;i<t.length;i++)
+	{
+		// if the table has not the right class, skip it
+		if(!checktest.test(t[i].className)){continue;}
+
+		// make the footer clickable
+		t[i].getElementsByTagName('thead')[0].onclick=function()
+		{
+			// loop through all bodies of this table and show or hide
+			// them
+			var tb=this.parentNode.getElementsByTagName('tbody');
+			for(var i=0;i<tb.length;i++)
+			{
+				tb[i].style.display=tb[i].style.display=='none'?'':'none';
+			}
+			// change the image accordingly
+			var li=this.getElementsByTagName('img')[0];
+			li.src=li.src.indexOf(collapsePic)==-1?collapsePic:expandPic;
+		}
+		// if the bodies should be collapsed initially, do so
+		if(initialCollapse)
+		{
+			var tb=t[i].getElementsByTagName('tbody');
+			for(var j=0;j<tb.length;j++)
+			{
+				tb[j].style.display='none';
+			}
+		}
+		// add the image surrounded by a dummy link to allow keyboard
+		// access to the last cell in the footer
+		var newa=document.createElement('a');
+		newa.href='#';
+		newa.onclick=function(){return false;}
+		var newimg=document.createElement('img');
+		newimg.src=initialCollapse?expandPic:collapsePic;
+		var tf=t[i].getElementsByTagName('thead')[0];
+		var lt=tf.getElementsByTagName('th')[tf.getElementsByTagName('th').length-1];
+		newa.appendChild(newimg);
+		lt.insertBefore(newa,lt.firstChild);
+	}
+	/* Variables */
+	var collapseClass2='footcollapse2';
+	//var collapsePic='arrow_up.gif';
+	//var expandPic='arrow_down.gif';
+	var initialCollapse2=false;
+
+	// loop through all tables
+	var t=document.getElementsByTagName('table');
+	var checktest= new RegExp("(^|\\s)" + collapseClass2 + "(\\s|$)");
+	for (var i=0;i<t.length;i++)
+	{
+		// if the table has not the right class, skip it
+		if(!checktest.test(t[i].className)){continue;}
+
+		// make the footer clickable
+		t[i].getElementsByTagName('thead')[0].onclick=function()
+		{
+			// loop through all bodies of this table and show or hide
+			// them
+			var tb=this.parentNode.getElementsByTagName('tbody');
+			for(var i=0;i<tb.length;i++)
+			{
+				tb[i].style.display=tb[i].style.display=='none'?'':'none';
+			}
+			// change the image accordingly
+			var li=this.getElementsByTagName('img')[0];
+			li.src=li.src.indexOf(collapsePic)==-1?collapsePic:expandPic;
+		}
+		// if the bodies should be collapsed initially, do so
+		if(initialCollapse2)
+		{
+			var tb=t[i].getElementsByTagName('tbody');
+			for(var j=0;j<tb.length;j++)
+			{
+				tb[j].style.display='none';
+			}
+		}
+		// add the image surrounded by a dummy link to allow keyboard
+		// access to the last cell in the footer
+		var newa=document.createElement('a');
+		newa.href='#';
+		newa.onclick=function(){return false;}
+		var newimg=document.createElement('img');
+		newimg.src=initialCollapse?collapsePic:expandPic;
+		var tf2=t[i].getElementsByTagName('thead')[0];
+		var lt2=tf.getElementsByTagName('th')[tf2.getElementsByTagName('th').length-1];
+		newa.appendChild(newimg);
+		lt2.insertBefore(newa,lt2.firstChild);
+	}
+}
+
+// run tablecollapse when the page loads
+window.onload=tablecollapse;
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2066167-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript" src="http://nexus.ensighten.com/choozle/2643/Bootstrap.js"></script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '772610419548473');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=772610419548473&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+</head>
+<body id="thebody" class="Level3"><form name="IronPointForm" method="Post" action="/schedules/weekend-timetable.html" id="IronPointForm" runat="server">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+</form><table id="wrapper" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+
+	<!-- header -->
+    <div id="header">
+    <a href="#info" class="skip">Skip to content</a>
+    	<div id="top_nav_area">
+        	<div id="top_nav"><a href="/main.html">home</a> | <a href="/sitemap.html">site map</a> | <a href="http://www.smctd.com/BidsContracts.html" title="Bids and Contracts" target="_blank">bids/contracts</a> | <a title="Jobs" href="/about/Jobs.html">jobs</a> | <a title="Contact Us" href="/about/contact.html">contact</a></div>
+          	<div id="search">
+<form name="IronPointForm_1" method="Post" id="IronPointForm_1" onsubmit="ipjSubmitIronPointForm(); return false;"><script language=javascript> <!--
+function SearchPageletSubmit_98(viewModeURL)
+{
+document.forms['IronPointForm'].__VIEWSTATE.name='NOVIEWSTATE';
+document.forms['IronPointForm'].action=viewModeURL;
+ipjSubmitIronPointForm('PageletSubmission');
+}; //-->
+</script>
+<input name="_html:txtSearchText_98" id="_html:txtSearchText_98"  title="Find results with:" type="text" class="ipf-PageSearch-TextField" onKeyDown="if ((event.which && event.which == 13) || (event.keyCode && event.keyCode == 13)) {SearchPageletSubmit_98('http://www.caltrain.com/Page98.aspx?PageMode=View&ContainerPageDefID=3438&PageletZone=0');}" />
+<input name="_html:btnSearch_98" id="_html:btnSearch_98" type="button" value="Search" onClick="JavaScript: SearchPageletSubmit_98('http://www.caltrain.com/Page98.aspx?PageMode=View&ContainerPageDefID=3438&PageletZone=0');" class="ipf-PageSearch-Button" />
+</form></div>
+        </div>
+    	<div id="logo"><a href="/main.html"><img src="/SharedSites/3/templates/images/logo.jpg" alt="Caltrain Logo" /></a></div>
+    </div>
+    <!-- /header -->
+    
+    <!-- navigation -->
+    <div id="primary_nav_area">
+    	<div id="nav">
+
+<ul id="sectionMenuElementID_0" class="ipf-sectionmenu">
+	<li id="pageid11" data-pageid="11" class="ipf-parent ipf-active1" data-level="1"><div><a href="/schedules.html">Schedules</a></div>
+	<ul>
+		<li id="pageid21" data-pageid="21" data-level="2"><a href="/schedules/weekdaytimetable.html">Weekday Timetable</a></li>
+		<li id="pageid3438" data-pageid="3438" class="ipf-active2" data-level="2"><a href="/schedules/weekend-timetable.html">Weekend Timetable</a></li>
+		<li id="pageid195" data-pageid="195" data-level="2"><a href="/schedules/holidayservice.html">Holiday Service</a></li>
+		<li id="pageid240" data-pageid="240" data-level="2"><a href="/schedules/PDF_Schedules.html">PDF Schedules</a></li>
+		<li id="pageid310" data-pageid="310" data-level="2"><a href="/schedules/realtime.html">Real Time</a></li>
+		<li id="pageid22" data-pageid="22" data-level="2"><a href="/schedules/tripplanners.html">Trip Planners</a></li>
+		<li id="pageid23" data-pageid="23" data-level="2"><a href="/schedules/Shuttles.html">Shuttles</a></li>
+	</ul>
+	</li>
+	<li id="pageid12" data-pageid="12" class="ipf-parent" data-level="1"><div><a href="/stations.html">Stations</a></div>
+	<ul>
+		<li id="pageid312" data-pageid="312" data-level="2"><a href="/stations/systemmap.html">System Map</a></li>
+		<li id="pageid5026" data-pageid="5026" data-level="2"><a href="/stations/ElevatorStatus.html">Elevator Status</a></li>
+	</ul>
+	</li>
+	<li id="pageid13" data-pageid="13" class="ipf-parent" data-level="1"><div><a href="/Fares.html">Fares</a></div>
+	<ul>
+		<li id="pageid25" data-pageid="25" data-level="2"><a href="/Fares/farechart.html">Fare Chart</a></li>
+		<li id="pageid26" data-pageid="26" data-level="2"><a href="/Fares/tickettypes.html">Ticket Types</a></li>
+		<li id="pageid29" data-pageid="29" data-level="2"><a href="/Fares/howtobuy.html">How to Buy</a></li>
+		<li id="pageid1390" data-pageid="1390" data-level="2"><a href="/Fares/codifiedtariff.html">Codified Tariff</a></li>
+		<li id="pageid28" data-pageid="28" data-level="2"><a href="/Fares/faresmisc.html">Miscellaneous</a></li>
+	</ul>
+	</li>
+	<li id="pageid14" data-pageid="14" class="ipf-parent" data-level="1"><div><a href="/riderinfo.html">Rider Information</a></div>
+	<ul>
+		<li id="pageid5168" data-pageid="5168" data-level="2"><a href="/riderinfo/CaltrainFareChanges.html">Caltrain Fare Changes</a></li>
+		<li id="pageid2096" data-pageid="2096" data-level="2"><a href="/riderinfo/howtoride.html">How to Ride</a></li>
+		<li id="pageid15" data-pageid="15" data-level="2"><a href="/riderinfo/Accessibility.html">Accessibility</a></li>
+		<li id="pageid31" data-pageid="31" data-level="2"><a href="/riderinfo/destinations.html">Destinations</a></li>
+		<li id="pageid32" data-pageid="32" data-level="2"><a href="/riderinfo/connections.html">Transit Connections</a></li>
+		<li id="pageid33" data-pageid="33" data-level="2"><a href="/riderinfo/safety_security.html">Safety &amp; Security</a></li>
+		<li id="pageid583" data-pageid="583" data-level="2"><a href="/riderinfo/newsletterandnotices.html">Newsletter &amp; Notices</a></li>
+		<li id="pageid34" data-pageid="34" data-level="2"><a href="/riderinfo/specialevents.html">Special Events</a></li>
+		<li id="pageid35" data-pageid="35" data-level="2"><a href="/riderinfo/Bicycles.html">Bicycles</a></li>
+		<li id="pageid36" data-pageid="36" data-level="2"><a href="/riderinfo/Parking.html">Parking</a></li>
+		<li id="pageid3386" data-pageid="3386" data-level="2"><a href="/riderinfo/Recycling.html">Recycling</a></li>
+		<li id="pageid1595" data-pageid="1595" data-level="2"><a href="/riderinfo/lostandfound.html">Lost and Found</a></li>
+		<li id="pageid3142" data-pageid="3142" data-level="2"><a href="/riderinfo/Expressive_Activity.html">Expressive Activity</a></li>
+		<li id="pageid1991" data-pageid="1991" data-level="2"><a href="/riderinfo/TitleVI.html">Title VI</a></li>
+		<li id="pageid4530" data-pageid="4530" data-level="2"><a href="/riderinfo/Caltrain__Behind_the_Scenes_of_a_Major_Service_Disruption.html">Caltrain: Major Service Issues</a></li>
+		<li id="pageid4966" data-pageid="4966" data-level="2"><a href="/riderinfo/_MyCaltrain_Testimonial.html">#MyCaltrain Testimonial</a></li>
+	</ul>
+	</li>
+	<li id="pageid16" data-pageid="16" class="ipf-parent" data-level="1"><div><a href="/projectsplans.html">Projects &amp; Plans</a></div>
+	<ul>
+		<li id="pageid43" data-pageid="43" data-level="2"><a href="/projectsplans/Projects.html">Projects</a></li>
+		<li id="pageid46" data-pageid="46" data-level="2"><a href="/projectsplans/Plans.html">Plans</a></li>
+		<li id="pageid1617" data-pageid="1617" data-level="2"><a href="/projectsplans/CaltrainModernization.html">Caltrain Modernization</a></li>
+		<li id="pageid5225" data-pageid="5225" data-level="2"><a href="/projectsplans/Business_Plan.html">Business Plan</a></li>
+	</ul>
+	</li>
+	<li id="pageid79" data-pageid="79" class="ipf-parent" data-level="1"><div><a href="/about.html">About Caltrain</a></div>
+	<ul>
+		<li id="pageid81" data-pageid="81" data-level="2"><a href="/about/bod.html">Board of Directors</a></li>
+		<li id="pageid129" data-pageid="129" data-level="2"><a href="/about/advisorycommittees.html">Advisory Committees</a></li>
+		<li id="pageid4167" data-pageid="4167" data-level="2"><a href="/about/MediaRelations.html">Media Relations</a></li>
+		<li id="pageid83" data-pageid="83" data-level="2"><a href="/about/Government_Affairs.html">Government Affairs</a></li>
+		<li id="pageid3125" data-pageid="3125" data-level="2"><a href="/about/SocialMedia.html">Social Media</a></li>
+		<li id="pageid82" data-pageid="82" data-level="2"><a href="/about/doingbusiness.html">Doing Business</a></li>
+		<li id="pageid3836" data-pageid="3836" data-level="2"><a href="/about/Sustainability.html">Sustainability</a></li>
+		<li id="pageid84" data-pageid="84" data-level="2"><a href="/about/statsandreports.html">Statistics &amp; Reports</a></li>
+		<li id="pageid124" data-pageid="124" data-level="2"><a href="/about/History.html">History</a></li>
+		<li id="pageid191" data-pageid="191" data-level="2"><a href="/about/Jobs.html">Jobs</a></li>
+		<li id="pageid4862" data-pageid="4862" data-level="2"><a href="/about/JPB-Agreements.html">JPB Agreements</a></li>
+		<li id="pageid5241" data-pageid="5241" data-level="2"><a href="/about/publicnotices.html">Public Notices</a></li>
+		<li id="pageid2802" data-pageid="2802" data-level="2"><a href="/about/PRA.html">Public Records Requests</a></li>
+		<li id="pageid181" data-pageid="181" data-level="2"><a href="/about/contact.html">Contact Us</a></li>
+	</ul>
+	</li>
+</ul>
+<script type="text/javascript">
+//IDs to be active: <!-- 
+ipjInitUnorderedListMenu("sectionMenuElementID_0",0);
+//-->
+<!-- 
+ipjInitUnorderedListMenuItemsActive("sectionMenuElementID_0");
+//-->
+</script>
+</div>
+    </div>
+     <!-- /navigation -->
+    
+    <!-- content -->
+    
+    
+    
+    
+    <div id="content" class="clear">
+    
+    	<div id="ticker-wrap"></div>
+        
+
+        <table id="mian_content" width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td id="left">
+            	<div id="secondary_nav_area">
+                	<div id="nav2">
+
+<ul id="sectionMenuElementID_1" class="ipf-sectionmenu">
+	<li id="pageid11" data-pageid="11" class="ipf-parent ipf-active1" data-level="1"><div><a href="/schedules.html">Schedules</a></div>
+	<ul rel="open">
+		<li id="pageid21" data-pageid="21" data-level="2"><a href="/schedules/weekdaytimetable.html">Weekday Timetable</a></li>
+		<li id="pageid3438" data-pageid="3438" class="ipf-active2" data-level="2"><a href="/schedules/weekend-timetable.html">Weekend Timetable</a></li>
+		<li id="pageid195" data-pageid="195" data-level="2"><a href="/schedules/holidayservice.html">Holiday Service</a></li>
+		<li id="pageid240" data-pageid="240" data-level="2"><a href="/schedules/PDF_Schedules.html">PDF Schedules</a></li>
+		<li id="pageid310" data-pageid="310" data-level="2"><a href="/schedules/realtime.html">Real Time</a></li>
+		<li id="pageid22" data-pageid="22" data-level="2"><a href="/schedules/tripplanners.html">Trip Planners</a></li>
+		<li id="pageid23" data-pageid="23" data-level="2"><a href="/schedules/Shuttles.html">Shuttles</a></li>
+	</ul>
+	</li>
+	<li id="pageid12" data-pageid="12" class="ipf-parent" data-level="1"><div><a href="/stations.html">Stations</a></div>
+	<ul>
+		<li id="pageid312" data-pageid="312" data-level="2"><a href="/stations/systemmap.html">System Map</a></li>
+		<li id="pageid5026" data-pageid="5026" data-level="2"><a href="/stations/ElevatorStatus.html">Elevator Status</a></li>
+	</ul>
+	</li>
+	<li id="pageid13" data-pageid="13" class="ipf-parent" data-level="1"><div><a href="/Fares.html">Fares</a></div>
+	<ul>
+		<li id="pageid25" data-pageid="25" data-level="2"><a href="/Fares/farechart.html">Fare Chart</a></li>
+		<li id="pageid26" data-pageid="26" data-level="2"><a href="/Fares/tickettypes.html">Ticket Types</a></li>
+		<li id="pageid29" data-pageid="29" data-level="2"><a href="/Fares/howtobuy.html">How to Buy</a></li>
+		<li id="pageid1390" data-pageid="1390" data-level="2"><a href="/Fares/codifiedtariff.html">Codified Tariff</a></li>
+		<li id="pageid28" data-pageid="28" data-level="2"><a href="/Fares/faresmisc.html">Miscellaneous</a></li>
+	</ul>
+	</li>
+	<li id="pageid14" data-pageid="14" class="ipf-parent" data-level="1"><div><a href="/riderinfo.html">Rider Information</a></div>
+	<ul>
+		<li id="pageid5168" data-pageid="5168" data-level="2"><a href="/riderinfo/CaltrainFareChanges.html">Caltrain Fare Changes</a></li>
+		<li id="pageid2096" data-pageid="2096" data-level="2"><a href="/riderinfo/howtoride.html">How to Ride</a></li>
+		<li id="pageid15" data-pageid="15" data-level="2"><a href="/riderinfo/Accessibility.html">Accessibility</a></li>
+		<li id="pageid31" data-pageid="31" data-level="2"><a href="/riderinfo/destinations.html">Destinations</a></li>
+		<li id="pageid32" data-pageid="32" data-level="2"><a href="/riderinfo/connections.html">Transit Connections</a></li>
+		<li id="pageid33" data-pageid="33" data-level="2"><a href="/riderinfo/safety_security.html">Safety &amp; Security</a></li>
+		<li id="pageid583" data-pageid="583" data-level="2"><a href="/riderinfo/newsletterandnotices.html">Newsletter &amp; Notices</a></li>
+		<li id="pageid34" data-pageid="34" data-level="2"><a href="/riderinfo/specialevents.html">Special Events</a></li>
+		<li id="pageid35" data-pageid="35" data-level="2"><a href="/riderinfo/Bicycles.html">Bicycles</a></li>
+		<li id="pageid36" data-pageid="36" data-level="2"><a href="/riderinfo/Parking.html">Parking</a></li>
+		<li id="pageid3386" data-pageid="3386" data-level="2"><a href="/riderinfo/Recycling.html">Recycling</a></li>
+		<li id="pageid1595" data-pageid="1595" data-level="2"><a href="/riderinfo/lostandfound.html">Lost and Found</a></li>
+		<li id="pageid3142" data-pageid="3142" data-level="2"><a href="/riderinfo/Expressive_Activity.html">Expressive Activity</a></li>
+		<li id="pageid1991" data-pageid="1991" data-level="2"><a href="/riderinfo/TitleVI.html">Title VI</a></li>
+		<li id="pageid4530" data-pageid="4530" data-level="2"><a href="/riderinfo/Caltrain__Behind_the_Scenes_of_a_Major_Service_Disruption.html">Caltrain: Major Service Issues</a></li>
+		<li id="pageid4966" data-pageid="4966" data-level="2"><a href="/riderinfo/_MyCaltrain_Testimonial.html">#MyCaltrain Testimonial</a></li>
+	</ul>
+	</li>
+	<li id="pageid16" data-pageid="16" class="ipf-parent" data-level="1"><div><a href="/projectsplans.html">Projects &amp; Plans</a></div>
+	<ul>
+		<li id="pageid43" data-pageid="43" data-level="2"><a href="/projectsplans/Projects.html">Projects</a></li>
+		<li id="pageid46" data-pageid="46" data-level="2"><a href="/projectsplans/Plans.html">Plans</a></li>
+		<li id="pageid1617" data-pageid="1617" data-level="2"><a href="/projectsplans/CaltrainModernization.html">Caltrain Modernization</a></li>
+		<li id="pageid5225" data-pageid="5225" data-level="2"><a href="/projectsplans/Business_Plan.html">Business Plan</a></li>
+	</ul>
+	</li>
+	<li id="pageid79" data-pageid="79" class="ipf-parent" data-level="1"><div><a href="/about.html">About Caltrain</a></div>
+	<ul>
+		<li id="pageid81" data-pageid="81" data-level="2"><a href="/about/bod.html">Board of Directors</a></li>
+		<li id="pageid129" data-pageid="129" data-level="2"><a href="/about/advisorycommittees.html">Advisory Committees</a></li>
+		<li id="pageid4167" data-pageid="4167" data-level="2"><a href="/about/MediaRelations.html">Media Relations</a></li>
+		<li id="pageid83" data-pageid="83" data-level="2"><a href="/about/Government_Affairs.html">Government Affairs</a></li>
+		<li id="pageid3125" data-pageid="3125" data-level="2"><a href="/about/SocialMedia.html">Social Media</a></li>
+		<li id="pageid82" data-pageid="82" data-level="2"><a href="/about/doingbusiness.html">Doing Business</a></li>
+		<li id="pageid3836" data-pageid="3836" data-level="2"><a href="/about/Sustainability.html">Sustainability</a></li>
+		<li id="pageid84" data-pageid="84" data-level="2"><a href="/about/statsandreports.html">Statistics &amp; Reports</a></li>
+		<li id="pageid124" data-pageid="124" data-level="2"><a href="/about/History.html">History</a></li>
+		<li id="pageid191" data-pageid="191" data-level="2"><a href="/about/Jobs.html">Jobs</a></li>
+		<li id="pageid4862" data-pageid="4862" data-level="2"><a href="/about/JPB-Agreements.html">JPB Agreements</a></li>
+		<li id="pageid5241" data-pageid="5241" data-level="2"><a href="/about/publicnotices.html">Public Notices</a></li>
+		<li id="pageid2802" data-pageid="2802" data-level="2"><a href="/about/PRA.html">Public Records Requests</a></li>
+		<li id="pageid181" data-pageid="181" data-level="2"><a href="/about/contact.html">Contact Us</a></li>
+	</ul>
+	</li>
+</ul>
+<script type="text/javascript">
+<!-- 
+ddtreemenu.createTree("sectionMenuElementID_1", true);
+//-->
+</script>
+</div>
+                </div>
+                <div><div class="pagelet">
+<!--a href="/riderinfo/specialevents/SFGiants.html" title="Giants Service 2016"><img src="/Assets/Buttons/Small+Buttons+Caltrain/2014+Giants.gif" alt="2014 Giants" /></a-->
+<a href="/Fares/howtobuy/CaltrainMobile.html" title="Caltrain Mobile"><img src="/Assets/Buttons/Small+Buttons+Caltrain/Caltrain+Mobile+Small+Button.png" alt="Caltrain Mobile" style="margin-top: 15px;" /></a>
+</div></div>
+            </td>
+            <td id="right">
+           	  	<div class="tools">
+                    <div id="textsize" class="button">
+                    <a href="#" id="textsize-medium" onClick="setActiveStyleSheet('', 1);return false;">Text Size - Medium</a>
+                    <a href="#" id="textsize-large" onClick="setActiveStyleSheet('fontsizelarge'); return false;">Text Size - Large</a>
+                    <a href="#" id="textsize-extralarge" onClick="setActiveStyleSheet('fontsizeextralarge'); return false;">Text Size - Extra Large</a> Text Size
+                    </div>
+                    
+                	<div id="buttonset">
+                    	<!--<div class="phone button"><a href="#" title="View on Mobile Device"><img src="/SharedSites/3/templates/images/icon-phone.gif" alt="Mobile Device" /></a></div>-->
+                        <div class="addthis button">
+                        <!-- AddThis Button BEGIN -->
+                        <div class="addthis_toolbox addthis_default_style" style="margin:0; padding:0; float:left;">
+                        <!--<a href="http://www.addthis.com/bookmark.php?v=250&pub=xa-4b0e17fd67bc8665" class="addthis_button_compact"></a>-->
+                        </div>
+                        <!--<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=xa-4b0e17fd67bc8665"></script>-->
+                        <!-- AddThis Button END -->
+                        </div>
+                        <div class="print button"><a href="javascript: ipjOpenPrintPage('/schedules/weekend-timetable.html?PageMode=Print');" class="ipb"></a></div>
+                        <!--<div class="rss button"><a href="/rss" title="RSS Feeds"><img src="/SharedSites/3/templates/images/icon-rss.gif" alt="RSS Feeds" /></a></div>-->
+                    </div>
+              	</div>
+                
+          		<div id="breadcrumb"></div>
+            	
+ <div id="info"></div>               
+                <H1>Weekend Timetable - Effective 7-15-2017</H1><!-- CONTENT CONTROL START --><style type="text/css">
+    table {
+    border-collapse: collapse;
+    margin-bottom: 3em;
+    background: #fff;
+    }
+    td, th {
+    padding: 0.3em 0.8em;
+    }
+    td#saturday {
+    color: #FFFFFF;
+    background-color: #000000;
+    text-align: center;
+    font-weight: normal;
+    }
+    th {
+    background-color: #EEEEEE;
+    border-top: 1px solid #CCC;
+    font-weight: bold;
+    white-space: nowrap;
+    }
+    tbody th {
+    background-color: #FAF1F1;
+    border-top: 1px solid #CCC;
+    }
+    tbody th.station {
+    text-align: right;
+    }
+    tbody th#even {
+    background-color: #F7DEDF;
+    }
+    tbody th#milepost {
+    font-weight: normal;
+    background-color: #FFFFFF;
+    }
+    tr#zoneline{
+    border-bottom: 2px solid #555555;
+    }
+    /*Northbound Timetable*/
+    .NB_TT td, .SB_TT td{
+    border-top: 1px solid #CCC;
+    }
+    .NB_TT tr td:nth-child(6), td:nth-child(12){
+    background-color: #F0B2A1; /*light red*/
+    }
+    .NB_TT tr td:nth-child(4), td:nth-child(17){
+    background-color: #000000; /*black*/
+    color: #FFFFFF;
+    }
+    .NB_TT td:nth-child(-n+7){
+    font-style: italic;
+    }
+    .NB_TT td:nth-child(n+8){
+    font-weight: bold;
+    }
+    .SB_TT tr td:nth-child(16){
+    background-color: #000000; /*black*/
+    color: #FFFFFF;
+    }
+    .SB_TT tr td:nth-child(7), td:nth-child(13){
+    background-color: #F0B2A1; /*light red*/
+    }
+    .SB_TT td:nth-child(12) {
+    background-color: #FFF;
+    }
+    .SB_TT td:nth-child(n+6){
+    font-weight: bold;
+    }
+    .SB_TT td:nth-child(-n+6){
+    font-style: italic;
+    }
+    .NB_TT td:nth-child(13) {
+    background-color: #FFF;
+    }
+    .giants {
+    color:#fff;
+    text-decoration:none;
+    background:#ed1c24;
+    padding:5px;
+    font-weight:bold;
+    font-size:16px;
+    border-radius:5px;
+    border:1px solid #000;
+    }
+    .giants:hover {
+    background:#fff;
+    color:#ed1c24;
+    }
+    p {
+    max-width: 600px;
+    }
+    .notice {
+    background: #fffafa;
+    border-color: #d2565d;
+    border-style: solid;
+    border-width: 0 0 0 5px;
+    padding: 20px 20px 20px 35px;
+    margin-bottom: 15px;
+    color: #000;
+    max-width: 600px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    }
+    .notice:before {
+    content: '!';
+    display: inline-block;
+    width: 20px;
+    float: left;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    background-color: #d2565d;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 16px;
+    left: 6px;
+    }
+    .notice p:first-child {
+    margin-top: 0;
+    }
+    .notice p:last-child {
+    margin-bottom: 0;
+    }
+    .notice p {
+    line-height: 1.5;
+    }
+    .notice.warning {
+    background-color: #fdf0f0;
+    }
+    .notice ul li {
+    font-size: 14px;
+    }
+    .notice h3.date {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+    background-color: #fffafa;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    font-size: 17px;
+    }
+    .notice button {
+    border: none;
+    background-color: #d2565d;
+    padding: 4px 8px;
+    border-radius: 3px;
+    color: #fff;
+    }
+    .notice ul {
+    margin-bottom: 30px;
+    }
+    .notice button:hover {
+    cursor: pointer;
+    background-color: #ec8288;
+    }
+</style>
+<p><strong>REGULAR WEEKEND (Saturday &amp; Sunday)  SCHEDULE BELOW</strong></p>
+<p><strong><a href="/schedules/PDF_Schedules.html" title="Download PDF Schedules">Download PDF TIMETABLES</a></strong></p>
+<p><strong>Legend:</strong> <br />
+<em>am - italics</em>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<strong>pm - bold</strong>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;- Train bypasses station.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;* Train departure may be delayed up to 15 minutes. </p>
+<table cellspacing="0" cellpadding="4">
+    <tbody>
+        <tr id="legend">
+            <td style="border: 1px solid #000000; width: 120px; text-align: center; color: #ffffff; background-color: #000000;">Saturday Only
+            </td>
+            <td style="width: 220px; text-align: center; background-color: #f0b2a1;">Weekend Baby Bullet Express</td>
+            <td valign="bottom" style="width: 200px; text-align: left;">Types of service descriptions</td>
+        </tr>
+    </tbody>
+</table>
+<h1 style="text-align: left;">Northbound Service</h1>
+<table class="NB_TT" summary="Weekday Northbound service" alt="Weekday Northbound service">
+    <thead>
+        <tr>
+            <td colspan="3"></td>
+            <td id="saturday">SAT<br />
+            ONLY</td>
+            <td colspan="12"></td>
+            <td id="saturday">SAT<br />
+            ONLY</td>
+        </tr>
+        <tr>
+            <th><br />
+            </th>
+            <th>Zone</th>
+            <th>Train #</th>
+            <th>421</th>
+            <th>423</th>
+            <th>801</th>
+            <th>425</th>
+            <th>427</th>
+            <th>429</th>
+            <th>431</th>
+            <th>433</th>
+            <th>803</th>
+            <th>435</th>
+            <th>437</th>
+            <th>439</th>
+            <th>441</th>
+            <th>443</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="color: green;">
+            <th></th>
+            <th></th>
+            <th style="text-align: right;">Shuttle Bus</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr style="color: green;">
+            <th></th>
+            <th></th>
+            <th style="text-align: right;">Departs <a href="/stations/tamienstation.html?" title="Tamien Station">Tamien</a></th>
+            <td>&nbsp;&nbsp;—</td>
+            <td>8:11</td>
+            <td>9:24</td>
+            <td>9:46</td>
+            <td style="font-weight: normal;"><i>11:11</i></td>
+            <td>12:41</td>
+            <td>2:11</td>
+            <td>3:41</td>
+            <td>4:54</td>
+            <td>5:16</td>
+            <td>6:41</td>
+            <td>8:11</td>
+            <td>9:41</td>
+            <td>&nbsp;&nbsp;—</td>
+        </tr>
+        <tr id="zoneline" style="color: green;">
+            <th></th>
+            <th></th>
+            <th style="text-align: right;">Arrives <a href="/stations/sanjosediridonstation.html?" title="San Jose Diridon Station">SJ Diridon</a> </th>
+            <td>&nbsp;&nbsp;—</td>
+            <td>8:23</td>
+            <td>9:36</td>
+            <td>9:58</td>
+            <td style="font-weight: normal;"><i>11:23</i></td>
+            <td>12:53</td>
+            <td>2:23</td>
+            <td>3:53</td>
+            <td>5:06</td>
+            <td>5:28</td>
+            <td>6:53</td>
+            <td>8:23</td>
+            <td>9:53</td>
+            <td>&nbsp;&nbsp;—</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">4</th>
+            <th class="station" id="even"><a href="/stations/sanjosediridonstation.html?" title="San Jose Diridon">San Jose Diridon</a></th>
+            <td>7:00</td>
+            <td>8:38</td>
+            <td>9:51</td>
+            <td>10:08</td>
+            <td style="font-weight: normal;"><i>11:38</i></td>
+            <td>1:08</td>
+            <td>2:38</td>
+            <td>4:08</td>
+            <td>5:21</td>
+            <td>5:38</td>
+            <td>7:08</td>
+            <td>8:38</td>
+            <td>10:08</td>
+            <td>10:30</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">4</th>
+            <th class="station" id="even"><a href="/stations/santaclarastation.html?" title="Santa Clara">Santa&nbsp;Clara</a></th>
+            <td>7:05</td>
+            <td>8:43</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>10:13</td>
+            <td style="font-weight: normal;"><i>11:43</i></td>
+            <td>1:13</td>
+            <td>2:43</td>
+            <td>4:13</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>5:43</td>
+            <td>7:13</td>
+            <td>8:43</td>
+            <td>10:13</td>
+            <td>10:35</td>
+        </tr>
+        <tr id="zoneline">
+            <th id="milepost"><br />
+            </th>
+            <th id="even">4</th>
+            <th class="station" id="even"><a href="/stations/lawrencestation.html?" title="Lawrence">Lawrence</a></th>
+            <td>7:10</td>
+            <td>8:49</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>10:19</td>
+            <td style="font-weight: normal;"><i>11:49</i></td>
+            <td>1:19</td>
+            <td>2:49</td>
+            <td>4:19</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>5:49</td>
+            <td>7:19</td>
+            <td>8:49</td>
+            <td>10:19</td>
+            <td>10:40</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>3</th>
+            <th class="station"><a href="/stations/sunnyvalestation.html?" title="Sunnyvale">Sunnyvale</a></th>
+            <td>7:14</td>
+            <td>8:53</td>
+            <td>10:01</td>
+            <td>10:23</td>
+            <td style="font-weight: normal;"><i>11:53</i></td>
+            <td>1:23</td>
+            <td>2:53</td>
+            <td>4:23</td>
+            <td>5:31</td>
+            <td>5:53</td>
+            <td>7:23</td>
+            <td>8:53</td>
+            <td>10:23</td>
+            <td>10:44</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>3</th>
+            <th class="station"><a href="/stations/mountainviewstation.html?" title="Mountain View">Mountain&nbsp;View</a></th>
+            <td>7:19</td>
+            <td>8:59</td>
+            <td>10:06</td>
+            <td>10:29</td>
+            <td style="font-weight: normal;"><i>11:59</i></td>
+            <td>1:29</td>
+            <td>2:59</td>
+            <td>4:29</td>
+            <td>5:36</td>
+            <td>5:59</td>
+            <td>7:29</td>
+            <td>8:59</td>
+            <td>10:29</td>
+            <td>10:49</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>3</th>
+            <th class="station"><a href="/stations/sanantoniostation.html?" title="San Antonio">San&nbsp;Antonio</a></th>
+            <td>7:23</td>
+            <td>9:03</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>10:33</td>
+            <td>12:03</td>
+            <td>1:33</td>
+            <td>3:03</td>
+            <td>4:33</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>6:03</td>
+            <td>7:33</td>
+            <td>9:03</td>
+            <td>10:33</td>
+            <td>10:53</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>3</th>
+            <th class="station"><a href="/stations/californiaavenuestation.html?" title="California Ave.">California Ave</a></th>
+            <td>7:27</td>
+            <td>9:07</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>10:37</td>
+            <td>12:07</td>
+            <td>1:37</td>
+            <td>3:07</td>
+            <td>4:37</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>6:07</td>
+            <td>7:37</td>
+            <td>9:07</td>
+            <td>10:37</td>
+            <td>10:57</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>3</th>
+            <th class="station"><a href="/stations/paloaltostation.html?" title="Palo Alto">Palo Alto</a></th>
+            <td>7:31</td>
+            <td>9:12</td>
+            <td>10:13</td>
+            <td>10:42</td>
+            <td>12:12</td>
+            <td>1:42</td>
+            <td>3:12</td>
+            <td>4:42</td>
+            <td>5:43</td>
+            <td>6:12</td>
+            <td>7:42</td>
+            <td>9:12</td>
+            <td>10:42</td>
+            <td>11:02</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>3</th>
+            <th class="station"><a href="/stations/menloparkstation.html?" title="Menlo Park">Menlo Park</a></th>
+            <td>7:34</td>
+            <td>9:15</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>10:45</td>
+            <td>12:15</td>
+            <td>1:45</td>
+            <td>3:15</td>
+            <td>4:45</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>6:15</td>
+            <td>7:45</td>
+            <td>9:15</td>
+            <td>10:45</td>
+            <td>11:05</td>
+        </tr>
+        <tr id="zoneline">
+            <th id="milepost"><br />
+            </th>
+            <th>3</th>
+            <th class="station"><a href="/stations/athertonstation.html?" title="Atherton Station">Atherton</a></th>
+            <td>7:37</td>
+            <td>9:19</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>10:49</td>
+            <td>12:19</td>
+            <td>1:49</td>
+            <td>3:19</td>
+            <td>4:49</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>6:19</td>
+            <td>7:49</td>
+            <td>9:19</td>
+            <td>10:49</td>
+            <td>11:09</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/redwoodcitystation.html?" title="Redwood City">Redwood City</a></th>
+            <td>7:41</td>
+            <td>9:23</td>
+            <td>10:20</td>
+            <td>10:53</td>
+            <td>12:23</td>
+            <td>1:53</td>
+            <td>3:23</td>
+            <td>4:53</td>
+            <td>5:50</td>
+            <td>6:23</td>
+            <td>7:53</td>
+            <td>9:23</td>
+            <td>10:53</td>
+            <td>11:13</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/sancarlosstation.html?" title="San Carlos">San Carlos</a></th>
+            <td>7:45</td>
+            <td>9:28</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>10:58</td>
+            <td>12:28</td>
+            <td>1:58</td>
+            <td>3:28</td>
+            <td>4:58</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>6:28</td>
+            <td>7:58</td>
+            <td>9:28</td>
+            <td>10:58</td>
+            <td>11:18</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/belmontstation.html?" title="Belmont">Belmont</a></th>
+            <td>7:48</td>
+            <td>9:32</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>11:02</td>
+            <td>12:32</td>
+            <td>2:02</td>
+            <td>3:32</td>
+            <td>5:02</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>6:32</td>
+            <td>8:02</td>
+            <td>9:32</td>
+            <td>11:02</td>
+            <td>11:22</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/hillsdalestation.html?" title="Hillsdale">Hillsdale</a></th>
+            <td>7:51</td>
+            <td>9:35</td>
+            <td>10:27</td>
+            <td>11:05</td>
+            <td>12:35</td>
+            <td>2:05</td>
+            <td>3:35</td>
+            <td>5:05</td>
+            <td>5:57</td>
+            <td>6:35</td>
+            <td>8:05</td>
+            <td>9:35</td>
+            <td>11:05</td>
+            <td>11:25</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/haywardparkstation.html?" title="Hayward Park">Hayward Park</a></th>
+            <td>7:55</td>
+            <td>9:39</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>11:09</td>
+            <td>12:39</td>
+            <td>2:09</td>
+            <td>3:39</td>
+            <td>5:09</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>6:39</td>
+            <td>8:09</td>
+            <td>9:39</td>
+            <td>11:09</td>
+            <td>11:29</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/sanmateostation.html?" title="San Mateo">San Mateo</a></th>
+            <td>7:58</td>
+            <td>9:42</td>
+            <td>10:31</td>
+            <td>11:12</td>
+            <td>12:42</td>
+            <td>2:12</td>
+            <td>3:42</td>
+            <td>5:12</td>
+            <td>6:01</td>
+            <td>6:42</td>
+            <td>8:12</td>
+            <td>9:42</td>
+            <td>11:12</td>
+            <td>11:32</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/burlingamestation.html?" title="Burlingame">Burlingame</a></th>
+            <td>8:02</td>
+            <td>9:46</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>11:16</td>
+            <td>12:46</td>
+            <td>2:16</td>
+            <td>3:46</td>
+            <td>5:16</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>6:46</td>
+            <td>8:16</td>
+            <td>9:46</td>
+            <td>11:16</td>
+            <td>11:36</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/broadwaystation.html?" title="Broadway Station">Broadway</a></th>
+            <td>8:06</td>
+            <td>9:50</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>11:20</td>
+            <td>12:50</td>
+            <td>2:20</td>
+            <td>3:50</td>
+            <td>5:20</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>6:50</td>
+            <td>8:20</td>
+            <td>9:50</td>
+            <td>11:20</td>
+            <td>11:40</td>
+        </tr>
+        <tr id="zoneline">
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/millbraetransitcenter.html?" title="Millbrae Transit Center">Millbrae</a></th>
+            <td>8:09</td>
+            <td>9:53</td>
+            <td>10:38</td>
+            <td>11:23</td>
+            <td>12:53</td>
+            <td>2:23</td>
+            <td>3:53</td>
+            <td>5:23</td>
+            <td>6:08</td>
+            <td>6:53</td>
+            <td>8:23</td>
+            <td>9:53</td>
+            <td>11:23</td>
+            <td>11:43</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>1</th>
+            <th class="station"><a href="/stations/sanbrunostation.html?" title="San Bruno">San Bruno</a></th>
+            <td>8:14</td>
+            <td>9:58</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>11:28</td>
+            <td>12:58</td>
+            <td>2:28</td>
+            <td>3:58</td>
+            <td>5:28</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>6:58</td>
+            <td>8:28</td>
+            <td>9:58</td>
+            <td>11:28</td>
+            <td>11:48</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>1</th>
+            <th class="station"><a href="/stations/southsanfranciscostation.html?" title="South San Francisco">So. San Francisco</a></th>
+            <td>8:19</td>
+            <td>10:03</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>11:33</td>
+            <td>1:03</td>
+            <td>2:33</td>
+            <td>4:03</td>
+            <td>5:33</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>7:03</td>
+            <td>8:33</td>
+            <td>10:03</td>
+            <td>11:33</td>
+            <td>11:53</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>1</th>
+            <th class="station"><a href="/stations/bayshorestation.html?" title="Bayshore">Bayshore</a></th>
+            <td>8:25</td>
+            <td>10:09</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>11:39</td>
+            <td>1:09</td>
+            <td>2:39</td>
+            <td>4:09</td>
+            <td>5:39</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>7:09</td>
+            <td>8:39</td>
+            <td>10:09</td>
+            <td>11:39</td>
+            <td>11:59</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>1</th>
+            <th class="station"><a href="/stations/22ndstreetstation.html?" title="22nd St.">22<sup>nd</sup> Street</a></th>
+            <td>8:31</td>
+            <td>10:15</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>11:45</td>
+            <td>1:15</td>
+            <td>2:45</td>
+            <td>4:15</td>
+            <td>5:45</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>7:15</td>
+            <td>8:45</td>
+            <td>10:15</td>
+            <td>11:45</td>
+            <td>12:04</td>
+        </tr>
+        <tr id="zoneline">
+            <th id="milepost"><br />
+            </th>
+            <th>1</th>
+            <th class="station"><a href="/stations/sanfranciscostation.html?" title="San Francisco">San Francisco</a></th>
+            <td>8:38</td>
+            <td>10:22</td>
+            <td>10:57</td>
+            <td>11:52</td>
+            <td>1:22&nbsp;</td>
+            <td>2:52</td>
+            <td>4:22</td>
+            <td>5:52</td>
+            <td>6:27</td>
+            <td>7:22</td>
+            <td>8:52</td>
+            <td>10:22</td>
+            <td>11:52</td>
+            <td>12:12</td>
+        </tr>
+    </tbody>
+</table>
+<hr />
+<p><strong><a href="/schedules/PDF_Schedules.html" title="Download PDF Schedules">Download PDF TIMETABLES</a><br />
+<br />
+</strong></p>
+<h1 style="text-align: left;">Southbound Service</h1>
+<table class="SB_TT" summary="Weekday Southbound service" alt="Weekday Southbound service">
+    <thead>
+        <tr>
+            <td colspan="15"></td>
+            <td id="saturday" colspan="2">SATURDAY<br />
+            ONLY</td>
+        </tr>
+        <tr>
+            <th><br />
+            </th>
+            <th>Zone</th>
+            <th>Train #</th>
+            <th>422</th>
+            <th>424</th>
+            <th>426</th>
+            <th>802</th>
+            <th>428</th>
+            <th>430</th>
+            <th>432</th>
+            <th>434</th>
+            <th>436</th>
+            <th>804</th>
+            <th>438</th>
+            <th>440</th>
+            <th>442</th>
+            <th>444</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>1</th>
+            <th class="station"><a href="/stations/sanfranciscostation.html?" title="San Francisco">San Francisco</a></th>
+            <td>8:07</td>
+            <td>9:37</td>
+            <td style="font-weight: normal;"><i>11:07</i></td>
+            <td>12:04</td>
+            <td>12:37</td>
+            <td>2:07</td>
+            <td>3:37</td>
+            <td>5:07</td>
+            <td>6:37</td>
+            <td>7:34</td>
+            <td>8:07</td>
+            <td>9:37</td>
+            <td>10:51</td>
+            <td>12:05</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>1</th>
+            <th class="station"><a href="/stations/22ndstreetstation.html?" title="22nd St.">22<sup>nd</sup> Street</a></th>
+            <td>8:11</td>
+            <td>9:41</td>
+            <td style="font-weight: normal;"><i>11:11</i></td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>12:41</td>
+            <td>2:11</td>
+            <td>3:41</td>
+            <td>5:11</td>
+            <td>6:41</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>8:11</td>
+            <td>9:41</td>
+            <td>10:55</td>
+            <td>12:10</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>1</th>
+            <th class="station"><a href="/stations/bayshorestation.html?" title="Bayshore">Bayshore</a></th>
+            <td>8:18</td>
+            <td>9:48</td>
+            <td style="font-weight: normal;"><i>11:18</i></td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>12:48</td>
+            <td>2:18</td>
+            <td>3:48</td>
+            <td>5:18</td>
+            <td>6:48</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>8:18</td>
+            <td>9:48</td>
+            <td>11:02</td>
+            <td>12:15</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>1</th>
+            <th class="station"><a href="/stations/southsanfranciscostation.html?" title="South San Francisco">So. San Francisco</a></th>
+            <td>8:24</td>
+            <td>9:54</td>
+            <td style="font-weight: normal;"><i>11:24</i></td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>12:54</td>
+            <td>2:24</td>
+            <td>3:54</td>
+            <td>5:24</td>
+            <td>6:54</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>8:24</td>
+            <td>9:54</td>
+            <td>11:08</td>
+            <td>12:21</td>
+        </tr>
+        <tr id="zoneline">
+            <th id="milepost"><br />
+            </th>
+            <th>1</th>
+            <th class="station"><a href="/stations/sanbrunostation.html?" title="San Bruno">San Bruno</a></th>
+            <td>8:30</td>
+            <td>10:00</td>
+            <td style="font-weight: normal;"><i>11:30</i></td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>1:00</td>
+            <td>2:30</td>
+            <td>4:00</td>
+            <td>5:30</td>
+            <td>7:00</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>8:30</td>
+            <td>10:00</td>
+            <td>11:13</td>
+            <td>12:25</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/millbraetransitcenter.html?" title="Millbrae Transit Center">Millbrae</a></th>
+            <td>8:34</td>
+            <td>10:04</td>
+            <td style="font-weight: normal;"><i>11:34</i></td>
+            <td>12:19</td>
+            <td>1:04</td>
+            <td>2:34</td>
+            <td>4:04</td>
+            <td>5:34</td>
+            <td>7:04</td>
+            <td>7:49</td>
+            <td>8:34</td>
+            <td>10:04</td>
+            <td>11:18</td>
+            <td>12:29</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/broadwaystation.html?" title="Broadway Station">Broadway</a></th>
+            <td>8:38</td>
+            <td>10:08</td>
+            <td style="font-weight: normal;"><i>11:38</i></td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>1:08</td>
+            <td>2:38</td>
+            <td>4:08</td>
+            <td>5:38</td>
+            <td>7:08</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>8:38</td>
+            <td>10:08</td>
+            <td>11:22</td>
+            <td>12:33</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/burlingamestation.html?" title="Burlingame">Burlingame</a></th>
+            <td>8:41</td>
+            <td>10:11</td>
+            <td style="font-weight: normal;"><i>11:41</i></td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>1:11</td>
+            <td>2:41</td>
+            <td>4:11</td>
+            <td>5:41</td>
+            <td>7:11</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>8:41</td>
+            <td>10:11</td>
+            <td>11:25</td>
+            <td>12:35</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/sanmateostation.html?" title="San Mateo">San Mateo</a></th>
+            <td>8:45</td>
+            <td>10:15</td>
+            <td style="font-weight: normal;"><i>11:45</i></td>
+            <td>12:26</td>
+            <td>1:15</td>
+            <td>2:45</td>
+            <td>4:15</td>
+            <td>5:45</td>
+            <td>7:15</td>
+            <td>7:56</td>
+            <td>8:45</td>
+            <td>10:15</td>
+            <td>11:29</td>
+            <td>12:41</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/haywardparkstation.html" title="Hayward Park Station">Hayward Park
+            </a></th>
+            <td>8:48</td>
+            <td>10:18</td>
+            <td style="font-weight: normal;"><i>11:48</i></td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>1:18</td>
+            <td>2:48</td>
+            <td>4:18</td>
+            <td>5:48</td>
+            <td>7:18</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>8:48</td>
+            <td>10:18</td>
+            <td>11:32</td>
+            <td>12:44</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/hillsdalestation.html?" title="Hillsdale">Hillsdale</a></th>
+            <td>8:52</td>
+            <td>10:22</td>
+            <td style="font-weight: normal;"><i>11:52</i></td>
+            <td>12:30</td>
+            <td>1:22</td>
+            <td>2:52</td>
+            <td>4:22</td>
+            <td>5:52</td>
+            <td>7:22</td>
+            <td>8:00</td>
+            <td>8:52</td>
+            <td>10:22</td>
+            <td>11:36</td>
+            <td>12:47</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/belmontstation.html?" title="Belmont">Belmont</a></th>
+            <td>8:56</td>
+            <td>10:26</td>
+            <td style="font-weight: normal;"><i>11:56</i></td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>1:26</td>
+            <td>2:56</td>
+            <td>4:26</td>
+            <td>5:56</td>
+            <td>7:26</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>8:56</td>
+            <td>10:26</td>
+            <td>11:40</td>
+            <td>12:50</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/sancarlosstation.html?" title="San Carlos">San Carlos</a></th>
+            <td>8:59</td>
+            <td>10:29</td>
+            <td style="font-weight: normal;"><i>11:59</i></td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>1:29</td>
+            <td>2:59</td>
+            <td>4:29</td>
+            <td>5:59</td>
+            <td>7:29</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>8:59</td>
+            <td>10:29</td>
+            <td>11:43</td>
+            <td>12:53</td>
+        </tr>
+        <tr id="zoneline">
+            <th id="milepost"><br />
+            </th>
+            <th id="even">2</th>
+            <th class="station" id="even"><a href="/stations/redwoodcitystation.html?" title="Redwood City">Redwood City</a></th>
+            <td>9:04</td>
+            <td>10:34</td>
+            <td>12:04</td>
+            <td>12:37</td>
+            <td>1:34</td>
+            <td>3:04</td>
+            <td>4:34</td>
+            <td>6:04</td>
+            <td>7:34</td>
+            <td>8:07</td>
+            <td>9:04</td>
+            <td>10:34</td>
+            <td>11:48</td>
+            <td>12:59</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>3</th>
+            <th class="station"><a href="/stations/athertonstation.html?" title="Atherton Station">Atherton</a></th>
+            <td>9:09</td>
+            <td>10:39</td>
+            <td>12:09</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>1:39</td>
+            <td>3:09</td>
+            <td>4:39</td>
+            <td>6:09</td>
+            <td>7:39</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>9:09</td>
+            <td>10:39</td>
+            <td>11:53</td>
+            <td>1:03</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>3</th>
+            <th class="station"><a href="/stations/menloparkstation.html?" title="Menlo Park">Menlo Park</a></th>
+            <td>9:12</td>
+            <td>10:42</td>
+            <td>12:12</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>1:42</td>
+            <td>3:12</td>
+            <td>4:42</td>
+            <td>6:12</td>
+            <td>7:42</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>9:12</td>
+            <td>10:42</td>
+            <td>11:56</td>
+            <td>1:06</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>3</th>
+            <th class="station"><a href="/stations/paloaltostation.html?" title="Palo Alto">Palo Alto</a></th>
+            <td>9:16</td>
+            <td>10:46</td>
+            <td>12:16</td>
+            <td>12:44</td>
+            <td>1:46</td>
+            <td>3:16</td>
+            <td>4:46</td>
+            <td>6:16</td>
+            <td>7:46</td>
+            <td>8:14</td>
+            <td>9:16</td>
+            <td>10:46</td>
+            <td>12:00</td>
+            <td>1:09</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>3</th>
+            <th class="station"><a href="/stations/californiaavenuestation.html?" title="California Ave.">California Ave</a></th>
+            <td>9:20</td>
+            <td>10:50</td>
+            <td>12:20</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>1:50</td>
+            <td>3:20</td>
+            <td>4:50</td>
+            <td>6:20</td>
+            <td>7:50</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>9:20</td>
+            <td>10:50</td>
+            <td>12:04</td>
+            <td>1:13</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>3</th>
+            <th class="station"><a href="/stations/sanantoniostation.html?" title="San Antonio">San&nbsp;Antonio</a></th>
+            <td>9:24</td>
+            <td>10:54</td>
+            <td>12:24</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>1:54</td>
+            <td>3:24</td>
+            <td>4:54</td>
+            <td>6:24</td>
+            <td>7:54</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>9:24</td>
+            <td>10:54</td>
+            <td>12:08</td>
+            <td>1:17</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th>3</th>
+            <th class="station"><a href="/stations/mountainviewstation.html?" title="Mountain View">Mountain&nbsp;View</a></th>
+            <td>9:29</td>
+            <td>10:59</td>
+            <td>12:29</td>
+            <td>12:52</td>
+            <td>1:59</td>
+            <td>3:29</td>
+            <td>4:59</td>
+            <td>6:29</td>
+            <td>7:59</td>
+            <td>8:22</td>
+            <td>9:29</td>
+            <td>10:59</td>
+            <td>12:13</td>
+            <td>1:21</td>
+        </tr>
+        <tr id="zoneline">
+            <th id="milepost"><br />
+            </th>
+            <th>3</th>
+            <th class="station"><a href="/stations/sunnyvalestation.html?" title="Sunnyvale">Sunnyvale</a></th>
+            <td>9:34</td>
+            <td>11:04</td>
+            <td>12:34</td>
+            <td>12:57</td>
+            <td>2:04</td>
+            <td>3:34</td>
+            <td>5:04</td>
+            <td>6:34</td>
+            <td>8:04</td>
+            <td>8:27</td>
+            <td>9:34</td>
+            <td>11:04</td>
+            <td>12:18</td>
+            <td>1:26</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">4</th>
+            <th class="station" id="even"><a href="/stations/lawrencestation.html?" title="Lawrence">Lawrence</a></th>
+            <td>9:38</td>
+            <td>11:08</td>
+            <td>12:38</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>2:08</td>
+            <td>3:38</td>
+            <td>5:08</td>
+            <td>6:38</td>
+            <td>8:08</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>9:38</td>
+            <td>11:08</td>
+            <td>12:22</td>
+            <td>1:30</td>
+        </tr>
+        <tr>
+            <th id="milepost"><br />
+            </th>
+            <th id="even">4</th>
+            <th class="station" id="even"><a href="/stations/santaclarastation.html?" title="Santa Clara">Santa&nbsp;Clara</a></th>
+            <td>9:44</td>
+            <td>11:14</td>
+            <td>12:44</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>2:14</td>
+            <td>3:44</td>
+            <td>5:14</td>
+            <td>6:44</td>
+            <td>8:14</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>9:44</td>
+            <td>11:14</td>
+            <td>12:28</td>
+            <td>1:35</td>
+        </tr>
+        <tr id="zoneline">
+            <th id="milepost"><br />
+            </th>
+            <th id="even">4</th>
+            <th class="station" id="even"><a href="/stations/sanjosediridonstation.html?" title="San Jose Diridon">San Jose Diridon</a></th>
+            <td>9:52</td>
+            <td>11:22</td>
+            <td>12:52</td>
+            <td>1:12</td>
+            <td>2:22</td>
+            <td>3:52</td>
+            <td>5:22</td>
+            <td>6:52</td>
+            <td>8:22</td>
+            <td>8:39</td>
+            <td>9:52</td>
+            <td>11:22</td>
+            <td>12:36</td>
+            <td>1:43</td>
+        </tr>
+        <tr style="color: green;">
+            <th></th>
+            <th></th>
+            <th style="text-align: right;">Shuttle Bus</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr style="color: green;">
+            <th></th>
+            <th></th>
+            <th style="text-align: right;">Departs <a href="/stations/sanjosediridonstation.html?" title="San Jose Diridon Station">SJ Diridon</a></th>
+            <td>10:07</td>
+            <td>11:37</td>
+            <td>1:07</td>
+            <td>1:27</td>
+            <td>2:37</td>
+            <td>4:07</td>
+            <td>5:37</td>
+            <td>7:07</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>8:54</td>
+            <td>10:07</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>&nbsp;&nbsp;—</td>
+        </tr>
+        <tr id="zoneline" style="color: green;">
+            <th></th>
+            <th></th>
+            <th style="text-align: right;">Arrives <a href="/stations/tamienstation.html?" title="Tamien Station">Tamien</a></th>
+            <td>10:17</td>
+            <td>11:47</td>
+            <td>1:17</td>
+            <td>1:37</td>
+            <td>2:47</td>
+            <td>4:17</td>
+            <td>5:47</td>
+            <td>7:17</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>9:04</td>
+            <td>10:17</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>&nbsp;&nbsp;—</td>
+            <td>&nbsp;&nbsp;—</td>
+        </tr>
+    </tbody>
+</table>
+<p><strong><a href="/schedules/PDF_Schedules.html" title="Download PDF Timetables">Download PDF TIMETABLES</a><br />
+<br />
+</strong></p>
+<p><strong>Legend:</strong> <br />
+<em>am - italics</em>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<strong>pm - bold</strong>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;- Train bypasses station.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;* Train departure may be delayed up to 15 minutes. </p>
+<table cellspacing="0" cellpadding="4">
+    <tbody>
+        <tr id="legend">
+            <td style="border: 1px solid #000000; width: 120px; text-align: center; color: #ffffff; background-color: #000000;">Saturday Only
+            </td>
+            <td style="width: 220px; text-align: center; background-color: #f0b2a1;">Weekend Baby Bullet Express</td>
+            <td valign="bottom" style="width: 180px; text-align: left;">Types of service descriptions</td>
+        </tr>
+    </tbody>
+</table>
+<p><small>11/29/17 - jb/dn</small></p><!-- CONTENT CONTROL END --></td>
+          </tr>
+        </table>
+    
+  	</div>
+    <!-- /content -->
+    
+    <!-- footer -->
+    <div id="footer" class="clear">
+        <div id="flag"><div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-2066167-1'}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<span style="font-size: 7pt;"><a href="/riderinfo/Translations.html">Translation Info</a></span></div>
+      	<div id="seo">Copyright ©2018 caltrain.com&nbsp; •&nbsp; <a href="/about/privacypolicy.html" title="Privacy Policy">Privacy Policy</a> &nbsp; •&nbsp; <a href="http://www.smctd.com/" title="San Mateo County Transit District" target="_blank">San Mateo County Transit District</a>&nbsp; •&nbsp; <a href="http://www.caltrain.com/SocialMedia">Social Media</a></div>
+  	</div>
+	<!-- /footer -->
+
+	</td>
+  </tr>
+</table>
+<script type="text/javascript"> (function () {
+var tagjs = document.createElement("script");
+var s = document.getElementsByTagName("script")[0]; tagjs.async = true;
+tagjs.src = "//s.btstatic.com/tag.js#site=t4tmU86"; s.parentNode.insertBefore(tagjs, s);
+}());
+</script>
+
+<noscript>
+<iframe src="//s.thebrighttag.com/iframe?c=t4tmU86" width="1" height="1" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+</noscript>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A76F0AA8" />
+</div>
+<script type="text/javascript">
+<!--
+//ip startup script
+ipjInitIronPointFormHandling();
+//-->
+</script>
+
+<form name="IronPointForm_Footer" method="Post" id="IronPointForm_Footer" onsubmit="ipjSubmitIronPointForm(); return false;"><input type="hidden" name="__VIEWSTATEFOOTER" id="__VIEWSTATEFOOTER" value="/wEPDwUENTM4MQ8WIh4SaXBJbmFjdGl2ZUZvbGxvd1VwZx4ERTNSNmceBTM5ODRMZx4JaXBQYWdlbGV0Zx4OaXBBbGxvd1ByZXZpZXdnHhBpcFJldmlld0ZvbGxvd1VwZx4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBHgxpcENoaWxkTGlua3NoHghpcE1vYmlsZWgeBTNPSVJOZx4NaXBUcmFuc2xhdGlvbmgeEWlwQXJjaGl2ZUZvbGxvd1VwZx4OaXBOb25lRm9sbG93VXBnHg5pcEZvbGxvd3VwVGFza2geD2lwVW50aWxGb2xsb3dVcAK0AR4LX19JUF9QRENfSUQC1gEeC19fSVBfUFZDX0lEAmMWAgIBD2QWAgIVDw8WAh4SSW5pdGlhbENvbnRyb2xMb2FkaGQWAmYPDxYCHxFoZGRk+4PXk4P8MjEj+qNw8158YJr3B0g=" /></form><script type="text/javascript">ipjMoveViewstateFromFooter()</script></body>
+</html>
