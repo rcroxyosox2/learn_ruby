@@ -6,9 +6,8 @@ class Test
 	end
 end
 
-pz = Proc.new do "go fuck yourself" end
+pz = Proc.new do "Hello from a proc" end
 Test.new(:thing => pz)
-puts pz.is_a? "Proc"
 
 ar = [0,1,2,3,4,5]
 puts ar.class

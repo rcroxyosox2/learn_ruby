@@ -101,7 +101,7 @@ class CaltrainData
 		today = Date.today
 		weekend = today.saturday? || today.sunday?
 		s = CaltrainData.WEEKDAY
-		s = CaltrainData.weekend if weekend
+		s = CaltrainData.WEEKEND if weekend
 		s
 	end
 
@@ -111,8 +111,10 @@ class CaltrainData
 
 	def stops
 		stops = []
-		data.css(".center a").each_with_index do |item, i|
-			stop = Choice.new(:text => item["title"], :selection_data => data.css("tbody tr")[i].css("th")[0].text)
+		stopNameElements = (schedule == CaltrainData.WEEKEND) ? data.css("a") : data.css(".center a")
+		stopNameElements.each_with_index do |item, i|
+			zoneDataElements = (schedule == CaltrainData.WEEKEND) ? data.css("tbody tr")[i].css("th")[1].text : data.css("tbody tr")[i].css("th")[0].text
+			stop = Choice.new(:text => item["title"], :selection_data => zoneDataElements)
 			stops << stop
 		end
 		stops
@@ -168,17 +170,20 @@ end
 class Question
 	BREAK_OUT_CHAR = "x"
 	attr_accessor :answer, :invalid_selection_indexes
+
 	def initialize(options={})
 		@qmain = options[:qmain]
 		@qchoices = options[:qchoices]		
 		@invalid_selection_indexes = options[:invalid_selection_indexes]
-	end
+  end
+
 	def qchoices
 		@qchoices.each_with_index.map do |item, i|
 			item.selection_index = i
 			"#{i+1}: #{item.text} #{item.selection_data}"
 		end
-	end
+  end
+
 	def ask
 		ret = false
 		loop do
@@ -221,14 +226,10 @@ class TalkBot
 	end
 	def ask(*questions)
 		@questions = questions
-		previous_answer = nil
 		questions.each do |question|
 			result = question.ask
 			if !result
 				break
-			else
-				# puts question.answer
-				previous_answer = question.answer
 			end
 		end
 		self
