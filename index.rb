@@ -4,6 +4,8 @@ require 'Date'
 require 'Time'
 require 'pp'
 
+
+
 class String
 	# colorization
 	def colorize(color_code)
@@ -36,7 +38,7 @@ class String
 end
 
 
-class Scraper 
+class Scraper
 	attr_accessor :url, :parse_page
 
 	def initialize(url)
@@ -84,7 +86,7 @@ end
 class CaltrainData
 
 	def self.getTravelDirection(originNorthernIndex, destNorthernIndex)
-		if (originNorthernIndex == destNorthernIndex) 
+		if (originNorthernIndex == destNorthernIndex)
 			raise "Origin cannot be the same as destination"
 		end
 		(destNorthernIndex < originNorthernIndex) ? CaltrainData.NB : CaltrainData.SB
@@ -92,9 +94,9 @@ class CaltrainData
 
 	class << self
 		{
-			:WEEKEND => "Weekend", 
-			:WEEKDAY => "Weekday", 
-			:NB=>"Northbound", 
+			:WEEKEND => "Weekend",
+			:WEEKDAY => "Weekday",
+			:NB=>"Northbound",
 			:SB => "Southbound",
 			:AMPMTRAINS => ["426", "427", "142", "143"]
 		}.each do |k,name|
@@ -129,7 +131,7 @@ class CaltrainData
 
 		if (firstStop)
 			startsInSf = CaltrainData.sanitizeStop(firstStop["title"]) == "sanfrancisco"
-		end	
+		end
 
 		stopNameElements.each_with_index do |item, i|
 			zoneDataElements = (schedule == CaltrainData.WEEKEND) ? data.css("tbody tr")[i].css("th")[1].text : data.css("tbody tr")[i].css("th")[0].text
@@ -148,9 +150,9 @@ class CaltrainData
 			trainRoutes.each do |trainRoute|
 				od = trainRoute.other_data
 				(stopf, originf, destf) = [od[:stop], origin, destination].map { |item| CaltrainData.sanitizeStop(item) }
-				
+
 				if (od[:timeFromNow].to_i > 0)
-					if (stopf == originf || stopf == destf) 
+					if (stopf == originf || stopf == destf)
 						train = od[:train]
 						if(!options[train])
 							options[train] = [od]
@@ -188,9 +190,9 @@ class CaltrainData
 			arr = []
 			item.css('td, th').map do |tdth|
 				arr << tdth.text
-			end 
+			end
 			arr
-		end 
+		end
 
 		stopMatrix = stopNums.map.with_index do |stop, i|
 			arr = [stop]
@@ -200,7 +202,7 @@ class CaltrainData
 			arr
 		end
 
-		if(CaltrainData.schedule == CaltrainData.WEEKEND) 
+		if(CaltrainData.schedule == CaltrainData.WEEKEND)
 			stopMatrix.shift
 		end
 
@@ -238,7 +240,7 @@ class CaltrainData
 					end
 
 					formattedTime = time.strftime "%-l:%M %p"
-					timeFromNow = time.to_i-now.to_i
+					timeFromNow = (time - now) / 60
 				end
 
 				c = Choice.new(:text => "#{train} #{zone} #{stop} #{formattedTime} ", :selection_data => i, :other_data => {
@@ -247,7 +249,7 @@ class CaltrainData
 					:zone => zone,
 					:stop => stop,
 					:time => time,
-					:timeFromNow => timeFromNow
+					:timeFromNow => "#{timeFromNow} minutes"
 				})
 
 				c
@@ -319,7 +321,7 @@ class Question
 	def initialize(options={})
 		@on_before_ask = options[:on_before_ask]
 		@qmain = options[:qmain]
-		@qchoices = options[:qchoices]		
+		@qchoices = options[:qchoices]
 		@invalid_selection_indexes = options[:invalid_selection_indexes]
 	end
 
@@ -337,7 +339,7 @@ class Question
 			puts @qmain
 			sleep(0.5)
 			puts qchoices
-			puts "\n" 
+			puts "\n"
 			selection = gets.chomp
 			selection_int = selection.to_i
 
@@ -372,7 +374,7 @@ class TalkBot
 	def ask(*questions)
 		@questions = questions
 		questions.each_with_index do |question, i|
-			
+
 
 			!!question.on_before_ask && question.on_before_ask.call
 
@@ -395,13 +397,13 @@ stops = CaltrainData.stops.reverse;
 q1 = Question.new(:qmain => "Where will you leave from?", :qchoices => stops)
 q2 = Question.new(
 	:on_before_ask => Proc.new { pp "Oh heeeeeyyyy" },
-	:qmain => "And where you headed to?", 
-	:qchoices => stops, 
+	:qmain => "And where you headed to?",
+	:qchoices => stops,
 	:invalid_selection_indexes => Proc.new { [q1.answer.selection_index-1] }
 )
 
 TalkBot.new.ask(q1, q2).summerize { |t|
-	
+
 	originAnswerData = t.questions[0].answer
 	return unless originAnswerData
 
